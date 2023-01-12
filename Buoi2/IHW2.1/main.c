@@ -6,7 +6,7 @@
 
 #define KEY PORTDbits.RD7
 
-int x = 0x01;
+int x = 1;
 void main(void)
 {
 	TRISC = 0x00;
@@ -26,7 +26,7 @@ void main(void)
 		}
 		else
 		{
-			PORTC = 0x00;
+			PORTC = 0;
 		}
 		
 	}
