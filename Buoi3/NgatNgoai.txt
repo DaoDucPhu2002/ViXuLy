@@ -1,0 +1,46 @@
+Khung chuong trinh ngat ngoai
+ 
+
+//khai bao thu vien
+
+//cau hinh Pic
+
+void low_isr(void);
+void high_isr(void);
+
+
+//ngnt ngoai voi muc uu tien thap
+#pragma code low_vector = 0x18;
+void interrupt_at_low_vector(void)
+{
+_asm GOTO low_isr _endasm
+}
+#pragma code
+#pragma interruptlow low_isr
+void low_isr(void)
+{
+//cac lenh
+}
+
+
+//Ngat ngoai voi muc uu tien cao;
+
+#pragma code high_vector = 0x08
+void interrupt_at_high_vector(void)
+{
+_asm GOTO high_isr _endasm
+}
+
+#pragma code
+#pragma interrupt high_isr
+void high_isr(void)
+{
+//lenh
+}
+
+
+void main()
+{
+khoi khoi tao ngat
+khoi lenh
+}
