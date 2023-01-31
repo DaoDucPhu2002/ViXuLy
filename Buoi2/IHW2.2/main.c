@@ -6,7 +6,7 @@
 #pragma config MCLRE = ON
 
 
-#define KEY PORTBbits.RB4
+#define PORTBbits.RB4 KEY 
 int i;
 int dem=0;
 

@@ -1,17 +1,18 @@
 MPLINK 4.1, Linker
-Linker Map File - Created Mon Jan 30 21:51:36 2023
+Linker Map File - Created Mon Jan 30 23:32:22 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
+               low_vector       code   0x000018    program   0x000006
                    .cinit    romdata   0x00002a    program   0x00000e
-               _cinit_scn       code   0x000038    program   0x00009e
-             .code_main.o       code   0x0000d6    program   0x000042
-             D10KTCYXCODE       code   0x000118    program   0x00002e
-             _startup_scn       code   0x000146    program   0x00001c
-           .code___init.o       code   0x000162    program   0x000002
-          .idata_main.o_i    romdata   0x000164    program   0x000002
+             .code_main.o       code   0x000038    program   0x0000f0
+               _cinit_scn       code   0x000128    program   0x00009e
+             D10KTCYXCODE       code   0x0001c6    program   0x00002e
+             _startup_scn       code   0x0001f4    program   0x00001c
+           .code___init.o       code   0x000210    program   0x000002
+          .idata_main.o_i    romdata   0x000212    program   0x000002
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000002
@@ -29,38 +30,42 @@ Linker Map File - Created Mon Jan 30 21:51:36 2023
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000005      
-                            0x00002a    0x000165      
+                            0x000018    0x00001d      
+                            0x00002a    0x000213      
                             0x300001    0x300001      
                             0x300005    0x300005      
-            324 out of 33048 program addresses used, program memory utilization is 0%
+            504 out of 33048 program addresses used, program memory utilization is 1%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D10K_1   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kl   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kx   0x000122    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-             Delay10KTCYx   0x000118    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x000128    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x000134    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                   D10K_1   0x0001d2    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kl   0x0001de    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kx   0x0001d0    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+             Delay10KTCYx   0x0001c6    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x0001d6    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0001e2    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000160    program     static                          
-       ___return_lbl00002   0x0000d4    program     static                          
-               __config_0   0x300001    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
-               __config_1   0x300005    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
-                   __init   0x000162    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
-                _do_cinit   0x000038    program     extern C:\MCC18\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x00001c    program     static                          
+       ___return_lbl00001   0x00020e    program     static                          
+       ___return_lbl00002   0x0001c4    program     static                          
+               __config_0   0x300001    program     static D:\ViXuLy\Buoi3\VD2\main.c
+               __config_1   0x300005    program     static D:\ViXuLy\Buoi3\VD2\main.c
+                   __init   0x000210    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                _do_cinit   0x000128    program     extern C:\MCC18\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                 _startup   0x000146    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                copy_loop   0x0000aa    program     static                          
-            copy_one_byte   0x0000b0    program     static                          
-                     done   0x0000d4    program     static                          
-             done_copying   0x0000be    program     static                          
-                     loop   0x000156    program     static                          
-                     main   0x0000d6    program     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
-                     test   0x000052    program     static                          
+                 _startup   0x0001f4    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                copy_loop   0x00019a    program     static                          
+            copy_one_byte   0x0001a0    program     static                          
+                     done   0x0001c4    program     static                          
+             done_copying   0x0001ae    program     static                          
+  interrupt_at_low_vector   0x000018    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+                     loop   0x000204    program     static                          
+                  low_isr   0x000038    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+                     main   0x0000ee    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+                     test   0x000142    program     static                          
                    ADCON0   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
@@ -255,7 +260,7 @@ Linker Map File - Created Mon Jan 30 21:51:36 2023
                curr_entry   0x000085       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static C:\MCC18\src\traditional\startup\c018i.c
                      prom   0x000080       data     static C:\MCC18\src\traditional\startup\c018i.c
-                        x   0x00008a       data     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
+                     temp   0x00008a       data     extern D:\ViXuLy\Buoi3\VD2\main.c
 
 
 
@@ -264,26 +269,29 @@ Linker Map File - Created Mon Jan 30 21:51:36 2023
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                _do_cinit   0x000038    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     test   0x000052    program     static                          
-                copy_loop   0x0000aa    program     static                          
-            copy_one_byte   0x0000b0    program     static                          
-             done_copying   0x0000be    program     static                          
-                     done   0x0000d4    program     static                          
-       ___return_lbl00002   0x0000d4    program     static                          
-                     main   0x0000d6    program     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
-             Delay10KTCYx   0x000118    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kx   0x000122    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                   D10K_1   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x000128    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kl   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x000134    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                 _startup   0x000146    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     loop   0x000156    program     static                          
-       ___return_lbl00001   0x000160    program     static                          
-                   __init   0x000162    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
-               __config_0   0x300001    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
-               __config_1   0x300005    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
+  interrupt_at_low_vector   0x000018    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+       ___return_lbl00000   0x00001c    program     static                          
+                  low_isr   0x000038    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+                     main   0x0000ee    program     extern D:\ViXuLy\Buoi3\VD2\main.c
+                _do_cinit   0x000128    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x000142    program     static                          
+                copy_loop   0x00019a    program     static                          
+            copy_one_byte   0x0001a0    program     static                          
+             done_copying   0x0001ae    program     static                          
+       ___return_lbl00002   0x0001c4    program     static                          
+                     done   0x0001c4    program     static                          
+             Delay10KTCYx   0x0001c6    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kx   0x0001d0    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                   D10K_1   0x0001d2    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x0001d6    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kl   0x0001de    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0001e2    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                 _startup   0x0001f4    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x000204    program     static                          
+       ___return_lbl00001   0x00020e    program     static                          
+                   __init   0x000210    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+               __config_0   0x300001    program     static D:\ViXuLy\Buoi3\VD2\main.c
+               __config_1   0x300005    program     static D:\ViXuLy\Buoi3\VD2\main.c
                      SIGN   0x000000       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
                 __FPFLAGS   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
@@ -293,7 +301,7 @@ Linker Map File - Created Mon Jan 30 21:51:36 2023
                 curr_byte   0x000083       data     static C:\MCC18\src\traditional\startup\c018i.c
                curr_entry   0x000085       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static C:\MCC18\src\traditional\startup\c018i.c
-                        x   0x00008a       data     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
+                     temp   0x00008a       data     extern D:\ViXuLy\Buoi3\VD2\main.c
                     PORTA   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                 PORTAbits   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                     PORTB   0x000f81       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
