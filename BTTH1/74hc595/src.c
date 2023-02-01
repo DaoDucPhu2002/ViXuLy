@@ -16,7 +16,7 @@ void IC_74HC595(unsigned char data)
 	clockPin = 0;
 	for(i=0;i<8;i++)
 	{
-		if((data&0x80)==0)
+		if((data&0x80)==1)
 		{
 			dataPin = 1;
 		}
