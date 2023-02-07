@@ -4,9 +4,9 @@
 #pragma config OSC = HS 
 #pragma config MCLRE = ON
 
-#define dataPin PORTDbits.RD5
-#define clockPin PORTDbits.RD4
-#define latchPin PORTDbits.RD6
+#define dataPin PORTDbits.RD0
+#define clockPin PORTDbits.RD1
+#define latchPin PORTDbits.RD2
 
 //thiet lap cho IC 74HC595;
 
@@ -16,7 +16,7 @@ void IC_74HC595(unsigned char data)
 	clockPin = 0;
 	for(i=0;i<8;i++)
 	{
-		if((data&0x80)==0)
+		if((data&0x80))
 		{
 			dataPin = 1;
 		}

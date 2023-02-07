@@ -6,6 +6,8 @@
 
 #define KEY PORTDbits.RD7
 
+//typedef  KEY = PORTDbits.RD7;
+
 int x = 1;
 void main(void)
 {

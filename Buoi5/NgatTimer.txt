@@ -1,0 +1,14 @@
+- ngắt timer la việc gián đoạn chương trình chính để chuyển sang thực hiện chương trình con phục vụ ngắt mỗi khi cờ báo IMRxIF của timer được set lên '1';
+LÝ DO CẦN SD TIMER
+	ngắt timer cầm thiết để thực hiện 1 tác vụ được định kì lặp đi lặp lại các khoảng thời gian xác định.Ngoài ra thời gian thực hiện tác vụ này, vi điều khiển có thể Thực hiện tác vụ khác ở chương trình chính.
+CÁC BIT ĐIỀU KHIỂN NGẮT TIMER;
+- Bit cho phép ngắt: IGE <van tổng>
+- Bit cho phép ngắt: TMRxIE
+- Ưu tiên ngắt: 	IPEN = 1
+			GIEL = 1
+			TMRxIP = 0/1 // ưu tiên ngắt.
+-  cờ			TMRxIP
+
+
+CÁC BƯỚC KHUNG CHƯƠNG TRÌNH ĐIỀU KHIỂN NGẮT TIMER;
+- Khởi tạo các PORT;

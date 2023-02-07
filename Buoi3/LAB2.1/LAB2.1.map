@@ -1,25 +1,25 @@
 MPLINK 4.1, Linker
-Linker Map File - Created Tue Jan 31 07:54:31 2023
+Linker Map File - Created Wed Feb 01 19:47:43 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
-               low_vector       code   0x000018    program   0x000006
+             uu_tien_thap       code   0x000018    program   0x000004
                    .cinit    romdata   0x00002a    program   0x00000e
                _cinit_scn       code   0x000038    program   0x00009e
-             .code_main.o       code   0x0000d6    program   0x000070
-                     PROG       code   0x000146    program   0x00004c
-         .code_fxd1616u.o       code   0x000192    program   0x00002c
-             _startup_scn       code   0x0001be    program   0x00001c
-           .code___init.o       code   0x0001da    program   0x000002
-          .idata_main.o_i    romdata   0x0001dc    program   0x000004
+             .code_main.o       code   0x0000d6    program   0x00005c
+                     PROG       code   0x000132    program   0x00004c
+         .code_fxd1616u.o       code   0x00017e    program   0x00002c
+             _startup_scn       code   0x0001aa    program   0x00001c
+           .code___init.o       code   0x0001c6    program   0x000002
+          .idata_main.o_i    romdata   0x0001c8    program   0x000002
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000010
-                 .tmpdata      udata   0x000010       data   0x000000
+                 .tmpdata      udata   0x000010       data   0x000002
            .udata_c018i.o      udata   0x000080       data   0x00000a
-            .idata_main.o      idata   0x00008a       data   0x000004
+            .idata_main.o      idata   0x00008a       data   0x000002
                    .stack      udata   0x000500       data   0x000100
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
@@ -29,45 +29,44 @@ Linker Map File - Created Tue Jan 31 07:54:31 2023
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000005      
-                            0x000018    0x00001d      
-                            0x00002a    0x0001df      
+                            0x000018    0x00001b      
+                            0x00002a    0x0001c9      
                             0x300001    0x300001      
                             0x300005    0x300005      
-            452 out of 33048 program addresses used, program memory utilization is 1%
+            428 out of 33048 program addresses used, program memory utilization is 1%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D1616S   0x000168    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                D1616SNEG   0x000176    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                 D1616SOK   0x000172    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                  D1616SX   0x000188    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                  DA1616S   0x000158    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                 FXD1616S   0x000146    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                 FXD1616U   0x000192    program     extern C:\MCC18\src\TRADIT~1\math\fxd1616u.c
-       ___return_lbl00000   0x0001bc    program     static                          
+                   D1616S   0x000154    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                D1616SNEG   0x000162    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                 D1616SOK   0x00015e    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                  D1616SX   0x000174    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                  DA1616S   0x000144    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                 FXD1616S   0x000132    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                 FXD1616U   0x00017e    program     extern C:\MCC18\src\TRADIT~1\math\fxd1616u.c
+       ___return_lbl00000   0x0001a8    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x00001c    program     static                          
-       ___return_lbl00001   0x0001d8    program     static                          
+       ___return_lbl00001   0x0001c4    program     static                          
        ___return_lbl00002   0x0000d4    program     static                          
                __config_0   0x300001    program     static D:\ViXuLy\Buoi3\LAB2.1\main.c
                __config_1   0x300005    program     static D:\ViXuLy\Buoi3\LAB2.1\main.c
-                   __init   0x0001da    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                   __init   0x0001c6    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
                 _do_cinit   0x000038    program     extern C:\MCC18\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                 _startup   0x0001be    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                 _startup   0x0001aa    program     extern C:\MCC18\src\traditional\startup\c018i.c
                 copy_loop   0x0000aa    program     static                          
             copy_one_byte   0x0000b0    program     static                          
                      done   0x0000d4    program     static                          
              done_copying   0x0000be    program     static                          
-                  endloop   0x0001b8    program     static                          
-  interrupt_at_low_vector   0x000018    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-                     loop   0x0001ce    program     static                          
-                     loop   0x00019c    program     static                          
-                  low_isr   0x0000d6    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-                     main   0x00010c    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
+                  endloop   0x0001a4    program     static                          
+                     loop   0x0001ba    program     static                          
+                     loop   0x000188    program     static                          
+                     main   0x0000f8    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
+                 ngat_cao   0x000018    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
+               ngat_ngoai   0x0000d6    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
                      test   0x000052    program     static                          
                    ADCON0   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
@@ -275,12 +274,12 @@ Linker Map File - Created Tue Jan 31 07:54:31 2023
                   __REMB1   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB2   0x000003       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB3   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
+                  __tmp_0   0x000010       data     static D:\ViXuLy\Buoi3\LAB2.1\main.c
                 curr_byte   0x000083       data     static C:\MCC18\src\traditional\startup\c018i.c
                curr_entry   0x000085       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static C:\MCC18\src\traditional\startup\c018i.c
                       dem   0x00008a       data     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
                      prom   0x000080       data     static C:\MCC18\src\traditional\startup\c018i.c
-                     sodu   0x00008c       data     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
 
 
 
@@ -289,42 +288,41 @@ Linker Map File - Created Tue Jan 31 07:54:31 2023
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-  interrupt_at_low_vector   0x000018    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-       ___return_lbl00000   0x00001c    program     static                          
+                 ngat_cao   0x000018    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
                 _do_cinit   0x000038    program     extern C:\MCC18\src\traditional\startup\c018i.c
                      test   0x000052    program     static                          
                 copy_loop   0x0000aa    program     static                          
             copy_one_byte   0x0000b0    program     static                          
              done_copying   0x0000be    program     static                          
-                     done   0x0000d4    program     static                          
        ___return_lbl00002   0x0000d4    program     static                          
-                  low_isr   0x0000d6    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-                     main   0x00010c    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-                 FXD1616S   0x000146    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                  DA1616S   0x000158    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                   D1616S   0x000168    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                 D1616SOK   0x000172    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                D1616SNEG   0x000176    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                  D1616SX   0x000188    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
-                 FXD1616U   0x000192    program     extern C:\MCC18\src\TRADIT~1\math\fxd1616u.c
-                     loop   0x00019c    program     static                          
-                  endloop   0x0001b8    program     static                          
-       ___return_lbl00000   0x0001bc    program     static                          
-                 _startup   0x0001be    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     loop   0x0001ce    program     static                          
-       ___return_lbl00001   0x0001d8    program     static                          
-                   __init   0x0001da    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                     done   0x0000d4    program     static                          
+               ngat_ngoai   0x0000d6    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
+                     main   0x0000f8    program     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
+                 FXD1616S   0x000132    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                  DA1616S   0x000144    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                   D1616S   0x000154    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                 D1616SOK   0x00015e    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                D1616SNEG   0x000162    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                  D1616SX   0x000174    program     static C:\MCC18\SRC\TRADIT~1\MATH\fxd1616s.asm
+                 FXD1616U   0x00017e    program     extern C:\MCC18\src\TRADIT~1\math\fxd1616u.c
+                     loop   0x000188    program     static                          
+                  endloop   0x0001a4    program     static                          
+       ___return_lbl00000   0x0001a8    program     static                          
+                 _startup   0x0001aa    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x0001ba    program     static                          
+       ___return_lbl00001   0x0001c4    program     static                          
+                   __init   0x0001c6    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
                __config_0   0x300001    program     static D:\ViXuLy\Buoi3\LAB2.1\main.c
                __config_1   0x300005    program     static D:\ViXuLy\Buoi3\LAB2.1\main.c
                      SIGN   0x000000       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
-            __FPFLAGSbits   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
                 __FPFLAGS   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
                   __REMB3   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB7   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB2   0x000003       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB6   0x000003       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
-                  __REMB1   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB5   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB4   0x000005       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB0   0x000005       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB3   0x000006       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
@@ -337,12 +335,12 @@ Linker Map File - Created Tue Jan 31 07:54:31 2023
                  __BARGB1   0x00000d       data     extern C:\MCC18\SRC\TRADIT~1\MATH\barg.asm
                  __BARGB0   0x00000e       data     extern C:\MCC18\SRC\TRADIT~1\MATH\barg.asm
                    __BEXP   0x00000f       data     extern C:\MCC18\SRC\TRADIT~1\MATH\barg.asm
+                  __tmp_0   0x000010       data     static D:\ViXuLy\Buoi3\LAB2.1\main.c
                      prom   0x000080       data     static C:\MCC18\src\traditional\startup\c018i.c
                 curr_byte   0x000083       data     static C:\MCC18\src\traditional\startup\c018i.c
                curr_entry   0x000085       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static C:\MCC18\src\traditional\startup\c018i.c
                       dem   0x00008a       data     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
-                     sodu   0x00008c       data     extern D:\ViXuLy\Buoi3\LAB2.1\main.c
                 PORTAbits   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                     PORTA   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
                 PORTBbits   0x000f81       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm

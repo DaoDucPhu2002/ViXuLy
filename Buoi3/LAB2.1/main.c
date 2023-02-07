@@ -1,43 +1,38 @@
 #include <P18f4520.h>
+#include <delays.h>
+#include <stdio.h>
 //#include <delays.h>//
 
 #pragma config OSC = HS	//thiet lap che do giao dong
 #pragma config MCLRE = ON // thiet lap RE lam chan RESET
-
-
- //bien toan cuc
- 
- int dem = 0;
- int sodu = 0;
-void low_isr(void); //ngat bang suon am
-
-#pragma code low_vector = 0x18
-
-void interrupt_at_low_vector(void)
-	{_asm GOTO low_isr _endasm}
-
-#pragma code
-#pragma interruptlow low_isr
-void low_isr(void)
+//khai bao ten chuong trinh con phuc vu ngat
+int dem  =0;
+void ngat_ngoai(void);
+#pragma code uu_tien_thap = 0x18
+void ngat_cao(void)
 {
-	INTCON3bits.INT2IF = 0; //xoa co ngat
-	dem = dem +1;
+	ngat_ngoai();
 }
-
+#pragma code
+#pragma interrupt ngat_ngoai
+void ngat_ngoai(void)
+{
+	INTCON3bits.INT2IF = 0;//xoa co ngat;
+	dem = dem+1;
+}
 
 void main()
 {
-	ADCON1 = 0x0f;
-	TRISB = 0b00000100;
+	ADCON1=0x0f;
 	TRISD = 0x00;
-	INTCONbits.GIE = 1; //cho phep su dung ngat ngoai
-	INTCON3bits.INT2IE=1; // su dung chan INT 2
-	INTCON2bits.INTEDG2 = 0; //cho phep ngat bang suon am // 1 la suon duong;
-	
+	TRISB = 0x04;
+	INTCONbits.GIE = 1;
+	INTCON3bits.INT2IE=1;
+	INTCON2bits.INTEDG2=0;
 	while(1)
 	{
-		sodu = dem/16;pp
-		PORTD = sodu;
-	}	
+		PORTD = dem%16;		
 
+	}
+	
 }
