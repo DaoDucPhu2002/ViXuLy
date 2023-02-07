@@ -12,3 +12,5 @@ CÁC BIT ĐIỀU KHIỂN NGẮT TIMER;
 
 CÁC BƯỚC KHUNG CHƯƠNG TRÌNH ĐIỀU KHIỂN NGẮT TIMER;
 - Khởi tạo các PORT;
+- Khởi tạo thanh ghi T0CON
+- Nạp giá trị ban đầu cho các thanh ghi TMR0H và
