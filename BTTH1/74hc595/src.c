@@ -16,11 +16,9 @@ void IC_74HC595(unsigned char data)
 	clockPin = 0;
 	for(i=0;i<8;i++)
 	{
-<<<<<<< HEAD
-		if((data&0x80))
-=======
+
+
 		if((data&0x80)==1)
->>>>>>> 513aa2af812322770ba9157eb5a690d5a34fcf96
 		{
 			dataPin = 1;
 		}
@@ -56,7 +54,7 @@ void output()
 	Delay10TCYx(50);
 	latchPin = 1;
 	latchPin = 0;
-}
+}	
 
 void main()
 {

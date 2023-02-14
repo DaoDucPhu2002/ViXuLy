@@ -1,0 +1,16 @@
+VD:tạo xung có tần số 200Hz trên RC1,Fosc = 12Hz
+F = 200Hz, T = 1/200 = 2500us
+
+4*x*N/Fosc = 2500us => x*n = 7500
+Nếu dùng 1 bộ chia tần x = 16 => N = 468>256: không được
+Dùng 2 bộ chia tần x1 = 16;x2 = 2; => x = 16*2 = 32; =>N = 234;
+giá trị 234 nạp vào PR2;
+
+CHƯƠNG TRÌNH TIMER2
+//khai báo, cấu hình PIC
+
+void main()
+{
+	OpenTimer2()
+
+}

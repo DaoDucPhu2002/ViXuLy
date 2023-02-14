@@ -24,12 +24,8 @@ void main(void)
 	while(1)
 	{
 		
-		PORTD = TMR3L;
-		if (TMR3L == 256)
-		{
-			temp = temp+1;
-		}
-		PORTB = temp;
+	PORTD = TMR3L;
+	PORTB = TMR3H;
 	}
 	
 }
