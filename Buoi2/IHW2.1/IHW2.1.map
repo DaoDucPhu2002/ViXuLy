@@ -1,5 +1,5 @@
 MPLINK 4.1, Linker
-Linker Map File - Created Wed Feb 01 22:59:02 2023
+Linker Map File - Created Tue Feb 21 14:19:21 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,11 +7,11 @@ Linker Map File - Created Wed Feb 01 22:59:02 2023
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x00002a    program   0x00000e
                _cinit_scn       code   0x000038    program   0x00009e
-             .code_main.o       code   0x0000d6    program   0x000042
-             D10KTCYXCODE       code   0x000118    program   0x00002e
-             _startup_scn       code   0x000146    program   0x00001c
-           .code___init.o       code   0x000162    program   0x000002
-          .idata_main.o_i    romdata   0x000164    program   0x000002
+             .code_main.o       code   0x0000d6    program   0x00003e
+             D10KTCYXCODE       code   0x000114    program   0x00002e
+             _startup_scn       code   0x000142    program   0x00001c
+           .code___init.o       code   0x00015e    program   0x000002
+          .idata_main.o_i    romdata   0x000160    program   0x000002
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000002
@@ -29,36 +29,36 @@ Linker Map File - Created Wed Feb 01 22:59:02 2023
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000005      
-                            0x00002a    0x000165      
+                            0x00002a    0x000161      
                             0x300001    0x300001      
                             0x300005    0x300005      
-            324 out of 33048 program addresses used, program memory utilization is 0%
+            320 out of 33048 program addresses used, program memory utilization is 0%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D10K_1   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kl   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kx   0x000122    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-             Delay10KTCYx   0x000118    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x000128    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x000134    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                   D10K_1   0x000120    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kl   0x00012c    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kx   0x00011e    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+             Delay10KTCYx   0x000114    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000160    program     static                          
+       ___return_lbl00001   0x00015c    program     static                          
        ___return_lbl00002   0x0000d4    program     static                          
                __config_0   0x300001    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
                __config_1   0x300005    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
-                   __init   0x000162    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                   __init   0x00015e    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
                 _do_cinit   0x000038    program     extern C:\MCC18\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                 _startup   0x000146    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                 _startup   0x000142    program     extern C:\MCC18\src\traditional\startup\c018i.c
                 copy_loop   0x0000aa    program     static                          
             copy_one_byte   0x0000b0    program     static                          
                      done   0x0000d4    program     static                          
              done_copying   0x0000be    program     static                          
-                     loop   0x000156    program     static                          
+                     loop   0x000152    program     static                          
                      main   0x0000d6    program     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
                      test   0x000052    program     static                          
                    ADCON0   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4520.asm
@@ -272,16 +272,16 @@ Linker Map File - Created Wed Feb 01 22:59:02 2023
                      done   0x0000d4    program     static                          
        ___return_lbl00002   0x0000d4    program     static                          
                      main   0x0000d6    program     extern D:\ViXuLy\Buoi2\IHW2.1\main.c
-             Delay10KTCYx   0x000118    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kx   0x000122    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                   D10K_1   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x000128    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                    D10Kl   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x000134    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
-                 _startup   0x000146    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     loop   0x000156    program     static                          
-       ___return_lbl00001   0x000160    program     static                          
-                   __init   0x000162    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
+             Delay10KTCYx   0x000114    program     extern C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kx   0x00011e    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                   D10K_1   0x000120    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x000124    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                    D10Kl   0x00012c    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x000130    program     static C:\MCC18\SRC\TRADIT~1\DELAYS\d10ktcyx.asm
+                 _startup   0x000142    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x000152    program     static                          
+       ___return_lbl00001   0x00015c    program     static                          
+                   __init   0x00015e    program     extern C:\MCC18\src\TRADIT~1\stdclib\__init.c
                __config_0   0x300001    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
                __config_1   0x300005    program     static D:\ViXuLy\Buoi2\IHW2.1\main.c
                      SIGN   0x000000       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm

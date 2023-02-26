@@ -4,31 +4,31 @@
 #pragma config OSC = HS // thiet lap che do xung
 #pragma config MCLRE = ON //thiet lap chan RE
 
-#define KEY PORTDbits.RD7
+#define KEY PORTBbits.RB1
 
 //typedef  KEY = PORTDbits.RD7;
 
-int x = 1;
+int x = 0B00110000;
 void main(void)
 {
-	TRISC = 0x00;
-	TRISB = 0x80;
+
+	TRISB = 0x0F;
 	ADCON1 = 0x0f;
 	while(1)
 	{
 		if (KEY == 1)
 		{
-			PORTC = x;
+			PORTB = x;
 			x=x<<1;	
 			Delay10KTCYx(100);//1s 
-			if (x > 0x08)
+			if (x > 0B11000000)
 			{
-				x = 0x01;
+				x = 0B00110000;
 			}
 		}
 		else
 		{
-			PORTC = 0;
+			PORTB = 0;
 		}
 		
 	}

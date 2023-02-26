@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: Bai7.mcp
+# Date: Tue Feb 21 13:22:30 2023
+
+AS = MPASMWIN.exe
+CC = mcc18.exe
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+Bai7.cof : Bai7_src.o
+	$(LD) /l"C:\MCC18\lib" "C:\MCC18\lkr\18f4520.lkr" "Bai7_src.o" /z__MPLAB_BUILD=1 /z__MPLAB_DEBUG=1 /o"Bai7.cof" /M"Bai7.map" /W
+
+Bai7_src.o : Bai7_src.c C:/MCC18/h/timers.h C:/MCC18/h/pwm.h Bai7_src.c C:/MCC18/h/P18f4520.h
+	$(CC) -p=18F4520 "Bai7_src.c" -fo="Bai7_src.o" -D__DEBUG -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+
+clean : 
+	$(RM) "Bai7_src.o" "Bai7.cof" "Bai7.hex"
+

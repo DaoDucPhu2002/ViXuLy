@@ -1,0 +1,40 @@
+1. PWM
+- có 2 bộ PWM PWM1 : CCP1 và PW2: PCC2B(mặc định) và PCC2A (#pragma config CCP2MX = PORTBE)
+- tính toán:
+	+ period (0-255)
+	+ prescale(1,4,16);
+	+ Duty cycle (0-10223);
+	=> các công thức có trong  tài liệu tra cứu oic trang 50;
+- Lập trình:
+	- sử dụng hàm trong thư viện PWM.h
+		+ hàm OpenTimer2: chọn prescale;
+		+ hàm OpenPWMx(): tạo xung có chu kì xác định;
+		+ hàm SetDCPWM(): tạo xung có Ton xác định;
+ - Tinh Toan Period:
+	period = (pwm_period)/(4*Tosc*prescale)-1;
+	
+	ta co: PWM_period = 800 (uS) // chu ki tren chan CPP1
+			Tosc = 12MHzs
+	
+
+=> chon prescaler = 16 => period = 149;
+
+	duty_cycle = PWM_Duty/(Tosc*prescaler);
+2. ADC
+thanh ghi ADCON1 <TRA tai lieu tra cuu PIC>
+
+CONG THUC CHUYEN DOI SO SANG TUONG TU
+
+digital = DienAp*1023/5
+
+digital = x = ReadADC();
+
+
+KHUNG CHUONG TRINH:
+	-Buoc1: Lua chon thanh ghi:
+	-Buoc2: cau hinh ngat cho bo chuyen doi:
+		+ OpenADC();
+	-Buoc3: Doi qua trinh chuyen doi hoan tat:
+		+ BusyADC
+	-Buoc4: Bat Dau Chuyen Doi
+		+ 

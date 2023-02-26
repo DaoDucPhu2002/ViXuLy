@@ -6,44 +6,27 @@
 #pragma config MCLRE = ON
 
 
-#define PORTBbits.RB4 KEY 
-int i;
-int dem=0;
+#define  KEY PORTBbits.RB1
 
-int TimSoDu(int Number);
-
-int TimSoDu(int Number)
-{
-	int soDu = 0;
-	soDu = Number%12;
-	return soDu;
-}
 
 void main(void)
 {
-	TRISB = 0b00010000;
+	TRISB = 0b00000010;
 	ADCON1 = 0x0f;
-	
+	PORTB = 0b00110000;
 	while(1)
 	{
-		if (KEY == 0)
-		{
-			Delay10KTCYx(50);
-			dem++;
-			
-			if (dem >255)
-			{
-				dem =0;
-			}
-		}
+	
+			Delay10KTCYx(100);
+			PORTB = PORTB<<1;
 		
-		PORTB = TimSoDu(dem);
-		//PORTB = 1;
-/*		for (i = 0;i<10;i++)
-		{
-			PORTB=i;
-			Delay10KTCYx(50);
-		}
-		*/
+			if (PORTB = 0b11000000)
+			{
+				PORTB = 0x00110000;
+				
+			}
+	
+	
+		
 	}
 }
